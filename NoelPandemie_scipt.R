@@ -39,14 +39,14 @@ date_2020 <- c("2020-09-01","2021-03-20")
 date_2021 <- c("2021-09-01", "2021-12-16")
 
 # Importer les données brutes et transformation en table allongée pour les CAS
-COVID_2020 <- read.table("20211219_Cas_quotidiens_confimes.txt", header = TRUE, sep = "\t") %>%
+COVID_2020 <- read.table("NoePandemie_Cas_quotidiens_confimes.txt", header = TRUE, sep = "\t") %>%
         mutate(Date = as.Date(Date)) %>%# Correction de format des dates
         filter(Date >= date_2020[1] & Date <= date_2020[2]) %>%
         mutate(Cas.2020 = QC)%>%
         select(Date, Cas.2020) %>%
         mutate(Date = Date %m+% years(1))   # Transférer la date en 2021 pour superposer les courbes sur 2020
 
-COVID_2021 <- read.table("20211219_Cas_quotidiens_confimes.txt", header = TRUE, sep = "\t") %>%
+COVID_2021 <- read.table("NoelPandemie_Cas_quotidiens_confimes.txt", header = TRUE, sep = "\t") %>%
         mutate(Date = as.Date(Date)) %>%# Correction de format des dates
         filter(Date >= date_2021[1] & Date <= date_2021[2]) %>%
         mutate(Cas.2021 = QC)%>%
