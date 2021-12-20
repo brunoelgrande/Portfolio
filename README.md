@@ -1,6 +1,6 @@
 # Portofolio de Bruno Gauthier
 
-Code et informations supplémentaires pour accompagné mon site [Portfolio](https://brunoelgrande.github.io).
+Code et informations supplémentaires pour accompagné mon site [Portfolio](https://blog.brunogauthier.net).
 
 
 ## 2021-12 Noel en pandémie
